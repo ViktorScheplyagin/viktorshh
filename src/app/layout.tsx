@@ -52,22 +52,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-/* TODO:
- ** add my name
- ** move the internationalisation controls to the controls sidebar
- ** make download PDF version possible
- ** commit
- ** deploy
- ** create a roadmap
- ** implement keyboard control
- ** move the info to DB
- ** internationalization
-
- ** make the stub about unavailability of the mobile website version with suggestion to download PDF
- ** analyse how much visitors using mobile devices
-
- ** create API
- ** create admin panel to edit the info and see statistics
- ** SEO
- */
