@@ -1,0 +1,31 @@
+export const data = {
+  frontEnd: [
+    "React",
+    "TypeScript",
+    "Redux",
+    "MobX",
+    "Vue.js",
+    "Angular",
+    "Webpack",
+    "Vite",
+  ],
+  backEnd: [
+    "NestJS",
+    "Express.js",
+    "MongoDB",
+    "MySQL",
+    "Docker",
+    "RESTful API Development",
+  ],
+  QA: ["Jest", "React Testing Library", "Enzyme", "NockJS", "Puppeteer"],
+  versionControl: ["Git", "GitHub", "Bitbucket"],
+  devTools: ["Visual Studio Code", "ESLint", "Prettier"],
+  agileMethodologies: ["Scrum", "Kanban"],
+  other: [
+    "SOLID Principles",
+    "Micro Frontends",
+    "Continuous Integration / Continuous Deployment (CI/CD)",
+    "RESTful API Design",
+    "GraphQL",
+  ],
+};
