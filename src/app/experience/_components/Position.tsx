@@ -1,8 +1,7 @@
-"use client";
 import { ContentBlockList } from "./ContentBlockList";
 import { IPosition } from "../IPosition";
 
-export default function Position({ data }: { data: IPosition }) {
+const Position = ({ data }: { data: IPosition }) => {
   const {
     title,
     company,
@@ -11,6 +10,7 @@ export default function Position({ data }: { data: IPosition }) {
     achievements,
     responsibilities,
   } = data;
+
   return (
     <div className="mb-12">
       <h2 className="text-2xl">
@@ -22,4 +22,6 @@ export default function Position({ data }: { data: IPosition }) {
       )}
     </div>
   );
-}
+};
+
+export default Position;

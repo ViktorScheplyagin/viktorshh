@@ -1,7 +1,7 @@
 import { NAVIGATION } from "@/constants";
 import Link from "./Link";
 
-export default function Navigation() {
+const Navigation = () => {
   const activeClassName = "after:content-['<-'] after:ml-3";
   const className = "flex justify-between";
 
@@ -47,4 +47,6 @@ export default function Navigation() {
       </ul>
     </nav>
   );
-}
+};
+
+export default Navigation;

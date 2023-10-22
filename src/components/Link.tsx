@@ -9,13 +9,13 @@ interface LinkProps extends PropsWithChildren<NextLinkProps> {
   className?: string;
 }
 
-export default function Link({
+const Link = ({
   href,
   activeClassName = "",
   className,
   children,
   ...rest
-}: LinkProps) {
+}: LinkProps) => {
   const pathname = usePathname();
   const isActive = pathname === href;
 
@@ -28,4 +28,6 @@ export default function Link({
       {children}
     </NextLink>
   );
-}
+};
+
+export default Link;
