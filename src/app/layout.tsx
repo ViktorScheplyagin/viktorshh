@@ -19,6 +19,7 @@ const LeftSidebar = () => (
         src="/my_photo.jpg"
       />
     </div>
+    <h1 className="pb-10 pt-6 text-xl">Viktor Shchepliahin</h1>
     <Navigation />
   </div>
 );

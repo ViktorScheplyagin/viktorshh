@@ -6,7 +6,7 @@ const Navigation = () => {
   const className = "flex justify-between";
 
   return (
-    <nav className="text-lg py-16 w-full max-w-[10rem]">
+    <nav className="text-lg w-full max-w-[10rem]">
       <ul className="flex flex-col gap-y-6">
         <li>
           <Link
