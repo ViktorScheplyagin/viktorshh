@@ -1,28 +1,8 @@
 import type { Metadata } from "next";
 import { Inconsolata } from "next/font/google";
 import Link from "next/link";
-import Image from "next/image";
-import { Navigation } from "@/components";
+import { LeftSidebar, Separator } from "@/components";
 import "./globals.css";
-
-const Separator = () => (
-  <div className="h-full w-1 bg-green-500 rounded-full"></div>
-);
-
-const LeftSidebar = () => (
-  <div className="flex flex-col overflow-y-auto w-96 pr-12">
-    <div className="relative min-h-[208px] min-w-[208px] overflow-hidden">
-      <Image
-        className="scale-150 object-contain"
-        alt="bio image"
-        fill
-        src="/my_photo.jpg"
-      />
-    </div>
-    <h1 className="pb-10 pt-6 text-xl">Viktor Shchepliahin</h1>
-    <Navigation />
-  </div>
-);
 
 const inter = Inconsolata({ weight: "400", subsets: ["latin"] });
 
