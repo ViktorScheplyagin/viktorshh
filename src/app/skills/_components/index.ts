@@ -1,1 +1,1 @@
-export { default as SkillsCategory } from "./SkillsCategory";
+export { default as Skill } from "./Skill";

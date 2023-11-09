@@ -1,23 +1,22 @@
 import { TerminalOutputAnimation } from "@/components";
-import { SkillsCategory } from "./_components";
-import { data } from "./data";
+import { ISkill } from "@/app/api/skills/interfaces";
+import { Skill } from "./_components";
 
-const Skills = () => (
-  <TerminalOutputAnimation>
-    <div className="grid grid-cols-2 gap-12">
-      <SkillsCategory title="Front-End Development" items={data.frontEnd} />
-      <SkillsCategory title="Back-End Development" items={data.backEnd} />
-      <SkillsCategory title="Testing and Quality Assurance" items={data.QA} />
-      <SkillsCategory title="Testing and Quality Assurance" items={data.QA} />
-      <SkillsCategory title="Version Control" items={data.versionControl} />
-      <SkillsCategory title="Development Tools" items={data.devTools} />
-      <SkillsCategory
-        title="Agile Methodologies"
-        items={data.agileMethodologies}
-      />
-      <SkillsCategory title="Other" items={data.other} />
-    </div>
-  </TerminalOutputAnimation>
-);
+const Skills = async () => {
+  const response: Response = await fetch("http://localhost:3000/api/skills", {
+    cache: "no-cache",
+  });
+  const skills: ISkill[] = await response.json();
+
+  return (
+    <TerminalOutputAnimation>
+      <div className="grid grid-cols-2 gap-12">
+        {skills.map((skill, index) => (
+          <Skill key={index} title={skill.name} items={skill.technologies} />
+        ))}
+      </div>
+    </TerminalOutputAnimation>
+  );
+};
 
 export default Skills;
