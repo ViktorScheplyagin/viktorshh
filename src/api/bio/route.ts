@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
-import { closeMongoDB, connectMongoDB } from "@/db";
+import { closeMongoDB, connectMongoDB } from "@/utils";
 import { Biography } from "@/db/models";
-import { IBiography } from "./interfaces";
+import { IBiography } from "@/app/interfaces";
 
 export async function GET() {
   await connectMongoDB();

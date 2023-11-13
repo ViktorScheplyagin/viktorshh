@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
-import { closeMongoDB, connectMongoDB } from "@/db";
+import { closeMongoDB, connectMongoDB } from "@/utils";
 import { Education } from "@/db/models";
-import { IEducationData } from "./interfaces";
+import { IEducationData } from "@/app/interfaces";
 
 export async function GET() {
   await connectMongoDB();

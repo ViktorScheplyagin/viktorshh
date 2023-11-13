@@ -1,6 +1,6 @@
-import { closeMongoDB, connectMongoDB } from "@/db";
+import { closeMongoDB, connectMongoDB } from "@/utils";
 import { Skill } from "@/db/models";
-import { ISkill } from "./interfaces";
+import { ISkill } from "@/app/interfaces";
 import { NextResponse } from "next/server";
 
 export async function GET() {
