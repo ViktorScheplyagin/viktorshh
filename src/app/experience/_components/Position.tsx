@@ -1,4 +1,4 @@
-import { IPosition } from "@/app/api/positions/interfaces";
+import { IPosition } from "@/app/interfaces";
 import { ContentBlockList } from "./ContentBlockList";
 import { calcDatesDiff } from "../utils";
 
@@ -24,7 +24,7 @@ const Position = ({ data }: { data: IPosition }) => {
         {`${title} at ${company}; ${location} - ${yearFrom}-${yearTo} (${period})`}
       </h2>
       <ContentBlockList heading="Responsibilities" items={responsibilities} />
-      {achievements && (
+      {!!achievements.length && (
         <ContentBlockList heading="Achievements" items={achievements} />
       )}
     </div>
