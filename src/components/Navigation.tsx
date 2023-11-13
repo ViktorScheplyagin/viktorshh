@@ -1,52 +1,31 @@
+"use client";
+import { useEffect, useState } from "react";
 import { NAVIGATION } from "@/constants";
 import Link from "./Link";
 
-const Navigation = () => {
-  const activeClassName = "after:content-['<-'] after:ml-3";
-  const className = "flex justify-between";
+const navItems: { title: string; to: NAVIGATION }[] = [
+  { title: "Bio", to: NAVIGATION.ROOT },
+  { title: "Experience", to: NAVIGATION.EXPERIENCE },
+  { title: "Skills", to: NAVIGATION.SKILLS },
+  { title: "Education", to: NAVIGATION.EDUCATION },
+];
 
-  return (
-    <nav className="text-lg w-full max-w-[10rem]">
-      <ul className="flex flex-col gap-y-6">
-        <li>
+const Navigation = () => (
+  <nav className="text-lg w-full">
+    <ul className="flex flex-col gap-y-6">
+      {navItems.map(({ title, to }, index) => (
+        <li key={index}>
           <Link
-            className={className}
-            activeClassName={activeClassName}
-            href={NAVIGATION.ROOT}
+            className="flex before:w-8"
+            activeClassName="before:content-['->']"
+            href={to}
           >
-            Bio
+            {title}
           </Link>
         </li>
-        <li>
-          <Link
-            className={className}
-            activeClassName={activeClassName}
-            href={NAVIGATION.EXPERIENCE}
-          >
-            Experience
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={className}
-            activeClassName={activeClassName}
-            href={NAVIGATION.SKILLS}
-          >
-            Skills
-          </Link>
-        </li>
-        <li>
-          <Link
-            className={className}
-            activeClassName={activeClassName}
-            href={NAVIGATION.EDUCATION}
-          >
-            Education
-          </Link>
-        </li>
-      </ul>
-    </nav>
-  );
-};
+      ))}
+    </ul>
+  </nav>
+);
 
 export default Navigation;
