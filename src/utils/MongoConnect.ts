@@ -1,4 +1,3 @@
-// db/connect.ts
 import mongoose from "mongoose";
 
 export async function connectMongoDB() {
