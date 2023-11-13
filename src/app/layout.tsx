@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inconsolata } from "next/font/google";
-import Link from "next/link";
 import { LeftSidebar, Separator } from "@/components";
 import "./globals.css";
 
@@ -14,16 +13,7 @@ const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en">
     <body className={inter.className}>
-      <header className="w-full h-14 flex justify-end items-center px-12">
-        <div className="w-16 flex justify-between text-lg">
-          <Link href="" className="hover:brightness-150">
-            EN
-          </Link>
-          <Link href="" className="hover:brightness-150">
-            DE
-          </Link>
-        </div>
-      </header>
+      <header className="w-full h-14 flex justify-end items-center px-12"></header>
       <main className="flex px-16 h-[calc(100vh-7rem)]">
         <LeftSidebar />
         <Separator />
