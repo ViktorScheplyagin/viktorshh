@@ -1,6 +1,6 @@
-export const NAVIGATION = Object.freeze({
-  ROOT: "/",
-  EXPERIENCE: "/experience",
-  SKILLS: "/skills",
-  EDUCATION: "/education",
-});
+export enum NAVIGATION {
+  ROOT = "/",
+  EXPERIENCE = "/experience",
+  SKILLS = "/skills",
+  EDUCATION = "/education",
+}
