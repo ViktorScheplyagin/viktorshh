@@ -1,18 +1,15 @@
 import { TerminalOutputAnimation } from "@/components";
-import { IBiography } from "./api/bio/interfaces";
+import { IBiography } from "@/app/interfaces";
+import { API_ROUTES } from "../constants/api";
 
 const Home = async () => {
-  const result: Response = await fetch("http://localhost:3000/api/bio", {
-    cache: "no-cache",
-  });
+  const result: Response = await fetch(API_ROUTES.BIO);
   const data: IBiography = await result.json();
 
   return (
-    <>
-      <TerminalOutputAnimation duration={0.5}>
-        {data.content}
-      </TerminalOutputAnimation>
-    </>
+    <TerminalOutputAnimation duration={0.5}>
+      {data.content}
+    </TerminalOutputAnimation>
   );
 };
 

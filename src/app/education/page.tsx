@@ -1,13 +1,11 @@
 import { TerminalOutputAnimation } from "@/components";
-import { IEducationData } from "@/app/api/education/interfaces";
+import { IEducationData } from "@/app/interfaces";
+import { API_ROUTES } from "../../constants/api";
 
 const Education = async () => {
-  const response = await fetch("http://localhost:3000/api/education", {
-    cache: "no-cache",
-  });
+  const response = await fetch(API_ROUTES.EDUCATION);
   const educationData: IEducationData = await response.json();
 
-  // TODO: use grid
   return (
     <TerminalOutputAnimation duration={0.5}>
       <div className="text-xl">Degree: {educationData.degree}</div>

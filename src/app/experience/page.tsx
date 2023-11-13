@@ -1,12 +1,10 @@
 import { TerminalOutputAnimation } from "@/components";
-import { IPosition } from "@/app/api/positions/interfaces";
+import { IPosition } from "@/app/interfaces";
 import { Position } from "./_components";
+import { API_ROUTES } from "../../constants/api";
 
 const Experience = async () => {
-  const response: Response = await fetch(
-    "http://localhost:3000/api/positions",
-    { cache: "no-cache" }
-  );
+  const response: Response = await fetch(API_ROUTES.POSITIONS);
   const positions: IPosition[] = await response.json();
 
   return (
