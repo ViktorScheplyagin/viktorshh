@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Navigation } from "@/components";
 
 const LeftSidebar = () => (
-  <div className="flex flex-col overflow-y-auto w-96 pr-12">
+  <div className="flex flex-col overflow-y-auto min-w-[18rem] pr-12">
     <div className="relative min-h-[208px] min-w-[208px] overflow-hidden">
       <Image
         className="scale-150 object-contain"
